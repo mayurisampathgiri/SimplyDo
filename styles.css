@@ -1,0 +1,46 @@
+body {
+    font-family: Bradley Hand, cursive;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.todo-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #050000;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #fefae0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.task-input {
+    width: 100%;
+    padding: 5px;
+}
+
+.add-button {
+    background-color: #dda15e;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}

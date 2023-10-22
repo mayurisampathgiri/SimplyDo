@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimplyDo</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>SimplyDo</h1>
+    <div class="todo-container">
+        <input type="text" id="task" class="task-input" placeholder="Enter a new task">
+        <button id="add" class="add-button">Add</button>
+        <ul id="task-list">
+           
+        </ul>
+    </div>
+
+    <script>
+        const addTaskButton = document.getElementById('add');
+        const taskInput = document.getElementById('task');
+        const taskList = document.getElementById('task-list');
+
+        addTaskButton.addEventListener('click', () => {
+            const taskText = taskInput.value.trim();
+            if (taskText) {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <span>${taskText}</span>
+                    <button class="delete">Delete</button>
+                `;
+                taskList.appendChild(listItem);
+                taskInput.value = '';
+
+                const deleteButton = listItem.querySelector('.delete');
+                deleteButton.addEventListener('click', () => {
+                    taskList.removeChild(listItem);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
